@@ -45,6 +45,27 @@ user> (.getValue myjep "t", (Class/forName "[Ljep.python.PyObject;"))
  #object[jep.python.PyObject 0x52723512 "{'key': 'value'}"]]
 
 
+;; Some basics
+
+user> (import [java.util HashMap])
+java.util.HashMap
+user> (.set myjep "t" (HashMap. {"one" 1 "two" 2}))
+nil
+user> (.eval myjep "b = t[\"one\"]")
+true
+user> (.getValue myjep "b")
+1
+user> (.set myjep "t" (vec (reverse (range 10))))
+nil
+user> (.eval myjep "b = t[2:2]")
+true
+user> (.getValue myjep "b")
+[]
+user> (.eval myjep "b = t[2:4]")
+true
+user> (.getValue myjep "b")
+[7 6]
+
 
 ;;Lets get into some numpy.  Jep has support for this through their
 ;;ndarray objects.  Tech has support via a protocols.  NDArrays are first
