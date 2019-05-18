@@ -1,4 +1,4 @@
-(defproject tech.python "0.1-SNAPSHOT"
+(defproject techascent/tech.python "0.1-SNAPSHOT"
   :description "Techascent bindings to the python ecosystem"
   :url "https://github.com/techascent/tech.python"
   :license {:name "EPL-2.0"
