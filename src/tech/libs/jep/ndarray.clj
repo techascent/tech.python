@@ -23,7 +23,7 @@
 
 
 (defprotocol PNDBindings
-  (is-unsigned [item])
+  (is-unsigned? [item])
   (dimensions [item]))
 
 
